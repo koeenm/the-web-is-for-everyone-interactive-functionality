@@ -1,0 +1,208 @@
+<!-- aanmeld formulier, is een stappenplan met progressive disclosure -->
+<section class="aanmeld-buttons">
+<button class="aanvraag-knop"><p>Aanvragen</p></button>
+<button class="aanbod-knop"><p>Aanbod aanmelden</p></button>
+</section>
+<section class="aanvraag-dialogs">
+    <form action="" method="dialog" class="aanmeld-form">
+        <!-- algemene eerste stap, voor zowel vraag als aanbod -->
+        <dialog class="aanvraag">
+                <fieldset>
+                    <h3>Stap 1</h3>
+                    <p>Wat wil je?</p>
+                    <label><input type="radio">Vraag</label>
+                    <label><input type="radio">Aanbod</label>
+                    <!-- <button>Terug</button> -->
+                    <button class="next-step">Volgende</button>
+                </fieldset>
+        </dialog>
+        <!-- stappen voor vraag -->
+        <div class="vragenlijst">
+            <dialog class="aanvraag">
+                <fieldset>
+                    <h3>Stap 2</h3>
+                    <p>Op welke e-mail kunnen we je bereiken?</p>
+                    <label><input type="email" required></label>
+                    <button class="previous-step">Terug</button>
+                    <button class="next-step">Volgende</button>
+                </fieldset>
+            </dialog>
+            <dialog class="aanvraag">
+                <fieldset>
+                    <h3>Stap 3</h3>
+                    <p>Hoe heet je?</p>
+                    <label><input type="text"></label>
+                    <button class="previous-step">Terug</button>
+                    <button class="next-step">Volgende</button>
+                </fieldset>
+            </dialog>
+            <dialog class="aanvraag">
+                <fieldset>
+                    <h3>Stap 4</h3>
+                    <p>Wat zoek je?</p>
+                    <label><input type="checkbox">Buurtinitiatief</label>
+                    <label><input type="checkbox">Eten</label>
+                    <label><input type="checkbox">Hulp in huis</label>
+                    <label><input type="checkbox">Nederlands</label>
+                    <button class="previous-step">Terug</button>
+                    <button class="next-step">Volgende</button>
+                </fieldset>
+            </dialog>
+            <dialog class="aanvraag">
+                <fieldset>
+                    <h3>Je aanvraag is binnengekomen!</h3>
+                    <button class="next-step">Bekijken</button>
+                    <a href="/vraag"><button>Ga naar overzicht</button></a>
+                </fieldset>
+            </dialog>
+        </div>
+    </form>
+
+<section class="aanmeld-dialogs">
+    <form action="" method="dialog" class="aanmeld-form">
+        <!-- stappen voor aanbieden -->
+        <div class="aanbodlijst">
+            <dialog class="aanbieden">
+            <fieldset>
+                <h3>Stap 2</h3>
+                <p>Hoe heet je?</p>
+                <label><input type="text"></label>
+                <button>Terug</button>
+                <button>Volgende</button>
+            </fieldset>
+            </dialog>
+            <dialog class="aanbieden">
+            <fieldset>
+                <h3>Stap 3</h3>
+                <p>Op welke e-mail kunnen we je bereiken?</p>
+                <label><input type="email"></label>
+                <button>Terug</button>
+                <button>Volgende</button>
+            </fieldset>
+            </dialog>
+            <dialog class="aanbieden">
+            <fieldset>
+                <h3>Stap 4</h3>
+                <p>Hoe noem je je initiatief?</p>
+                <label><input type="text"></label>
+                <button>Terug</button>
+                <button>Volgende</button>
+            </fieldset>
+            </dialog>
+            <dialog class="aanbieden">
+            <fieldset>
+                <h3>Stap 5</h3>
+                <p>Hoe zou je het beschrijven?</p>
+                <label><input type="text"></label>
+                <button>Terug</button>
+                <button>Volgende</button>
+            </fieldset>
+            </dialog>
+            <dialog class="aanbieden">
+            <fieldset>
+                <h3>Stap 6</h3>
+                <p>Waar is het?</p>
+                <label><input type="radio">Bos en Lommer</label>
+                <label><input type="radio">Westerpark</label>
+                <label><input type="radio">De Baarsjes</label>
+                <label><input type="radio">Oud West</label>
+                <label><input type="radio">Nieuw West</label>
+                <button class=".next-step">Terug</button>
+                <button>Volgende</button>
+            </fieldset>
+            </dialog>
+            <dialog class="aanbieden">
+            <fieldset>
+                <h3>Stap 7</h3>
+                <p>In welke catogerie valt het?</p>
+                <label><input type="checkbox">Buurtinitiatief</label>
+                <label><input type="checkbox">Eten</label>
+                <label><input type="checkbox">Hulp in huis</label>
+                <label><input type="checkbox">Nederlands</label>
+                <button>Terug</button>
+                <button>Volgende</button>
+            </fieldset>
+            </dialog>
+            <dialog class="aanbieden">
+            <fieldset>
+                <h3>Stap 8</h3>
+                <p>Heb je een bijbehorende foto?</p>
+                <label><input type="file"></label>
+                <button>Terug</button>
+                <button>Volgende</button>
+            </fieldset>
+            </dialog>
+            </div>
+        </form>
+    </form>
+</section>
+
+<script>
+let aanvraagBtn = document.querySelector('.aanvraag-knop')
+console.log(aanvraagBtn)
+let aanvraag = document.querySelectorAll('.aanvraag')
+
+let aanbodBtn = document.querySelectorAll('.aanbod-knop')
+console.log(aanbodBtn)
+let aanbieden = document.querySelectorAll('.aanbieden')
+
+let nextBtns = document.querySelectorAll('.next-step')
+let previousBtns = document.querySelectorAll('.previous-step')
+
+let aanvraagDialog = document.querySelectorAll('.aanvraag-dialog')
+let aanmeldDialog = document.querySelectorAll('.aanmeld-dialogs')
+
+// vraag
+
+aanvraagBtn.addEventListener('click', function() {
+    aanvraag[0].showModal();
+});
+
+nextBtns.forEach((btn, index) => {
+    btn.addEventListener('click', function(){
+        aanvraag[index].close();
+
+        if (index + 1 < aanvraag.length) {
+            aanvraag[index + 1].showModal();
+        }
+    });
+});
+
+previousBtns.forEach((btn, index) => {
+    btn.addEventListener('click', function() {
+        aanvraag[index].close();
+
+        if (index >= 0 < aanvraag.length) {
+            aanvraag[index - 1].showModal();
+        }
+    });
+});
+
+// aanbieden
+
+aanbodBtn.addEventListener('click', function() {
+    aanbieden[0].showModal();
+    console.log(aanbodBtn)
+});
+
+nextBtns.forEach((btn, index) => {
+    btn.addEventListener('click', function(){
+        aanbieden[index].close();
+
+        if (index + 1 < aanbieden.length) {
+            aanbieden[index + 1].showModal();
+        }
+    });
+});
+
+previousBtns.forEach((btn, index) => {
+    btn.addEventListener('click', function() {
+        aanbieden[index].close();
+
+        if (index >= 0 < aanbieden.length) {
+            aanbieden[index - 1].showModal();
+        }
+    });
+});
+
+</script>

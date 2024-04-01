@@ -1,0 +1,29 @@
+<%- include('./partials/head.ejs') -%>
+<%- include('./partials/nav.ejs') -%>
+
+<section class="detail-card">
+        <h3> <%= initiatief.title %></h3>
+        <% if (initiatief.start_date) { %>
+            <p>Startdatum: <%= initiatief.start_date %></p>
+        <% }   %>
+
+        <% if (initiatief.end_date) { %>
+            <p>Einddatum: <%= initiatief.end_date %></p>
+        <% } %>
+        
+        <% if (initiatief.neighbourhood) { %>
+            <p>Buurt: <%= initiatief.neighbourhood.replace(/_/g, " ").split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ') %></p>        <% } %>
+
+        <% if (initiatief.time) { %>
+            <p>Tijd: <%= initiatief.time %></p>
+        <% } %>
+
+        <article> <%- initiatief.long_description %> </article>
+
+        <% if (initiatief.image) { %>
+            <img src="https://fdnd-agency.directus.app/assets/<%= initiatief.image %>"
+
+            alt="<%- initiatief.title %>">
+        <% } %>
+</section>
+<%- include('./partials/foot.ejs') -%>
