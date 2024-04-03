@@ -4,11 +4,12 @@
 
 :root {
     --mainFont: raleway;
-    --colorOne: #86c232;
-    --colorTwo: #222629;
-    --colorThree: #474b4f;
-    --colorFour: #61892f;
+    --colorOne: black;
+    --colorTwo: #FFFFFF;
+    --colorThree: #E9F1FA;
+    --colorFour: black;
     --colorFive: #6b6e70;
+    --dialogColor: black;
 }
 
 @font-face {
@@ -19,7 +20,7 @@
 body {
     font-family: var(--mainFont);
     margin: 0;
-    background-color: var(--colorTwo);
+    background-color: var(--colorThree);
 }
 
 ul {
@@ -37,6 +38,7 @@ a {
 header {
     display: flex;
     padding: 0.5em;
+    background-color: var(--colorTwo);
 
     ul {
         display: none;
@@ -77,7 +79,7 @@ header {
 
     width: 100vw;
     height: 100vh;
-    background-color: var(--colorFive);
+    background-color: var(--colorThree);
     margin: 0;
 
     position: absolute;
@@ -220,7 +222,7 @@ section.for-each-cards {
 }
 
 section.detail-card {
-    background-color: var(--colorThree);
+    background-color: var(--colorTwo);
     width: 80vw;
     height: fit-content;
     margin: 0 auto;
@@ -295,18 +297,18 @@ dialog fieldset {
     display: flex;
     flex-direction: column;
 
-    color: var(--colorTwo);
+    color: var(--dialogColor);
 
     h3 {
-        color: var(--colorTwo);
+        color: var(--dialogColor);
     }
 
     p {
-        color: var(--colorTwo);
+        color: var(--dialogColor);
     }
 
     label, input {
-        color: var(--colorTwo);
+        color: var(--dialogColor);
     }
 
     input[type=checkbox] {
@@ -359,6 +361,9 @@ dialog {
 form {
     max-width: 60em;
     margin: 0 auto;
+
+    background-color: var(--colorTwo);
+    border-radius: 1em;
 
     fieldset {
         border: none;
