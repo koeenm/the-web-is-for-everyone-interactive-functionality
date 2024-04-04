@@ -13,7 +13,7 @@
   * [Licentie](#licentie)
 
 ## Beschrijving
-Voor deze opdracht is het de bedoeling dat ik een dynamische website maak door gebruik te maken van data uit een database. De opdrachtgever zijn de Hallen, die willen dat er een website komt waarop je initiatieven kan aanbieden en aanvragen. En hiernaast een overzicht te hebben van de al geplaatste initiatieven waarna je op een initatief kan klikken om er meer informatie over te krijgen.
+Voor deze opdracht is het de bedoeling dat ik een dynamische website maak door gebruik te maken van data uit een database. De opdrachtgever is de Hallen, die wilt dat er een website komt waarop je initiatieven kan aanbieden en aanvragen. Hiernaast willen ze een overzicht hebben van de al geplaatste initiatieven waarna je op een initatief kan klikken om er meer informatie over te krijgen.
 
 (Doelgroep)
 Je bent een buurtbewoner uit Amsterdam West. De leeftijd voor de bezoeker van deze site kan varieren van heel jong tot heel oud, dus sommige mensen zijn niet bekend met computers/telefoons.
