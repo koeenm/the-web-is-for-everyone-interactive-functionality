@@ -206,15 +206,15 @@ section.for-each-cards {
                 bottom: 0.5em;
                 right: 0.5em;
 
-                color: var(--colorOne);
-                background-color: var(--colorTwo);
+                color: var(--colorTwo);
+                background-color: var(--colorFour);
                 border: 2px solid var(--colorTwo);
             }
 
             button:hover {
-                background-color: var(--colorFour);
-                color: var(--colorTwo);
-                border: 2px solid var(--colorTwo);
+                background-color: var(--colorTwo);
+                color: var(--colorFour);
+                border: 2px solid var(--colorFive);
                 transition-duration: 200ms;
             }
         }
@@ -277,7 +277,7 @@ section.detail-card {
 }
 
 button {
-    background-color: var(--colorOne);
+    background-color: var(--colorFour);
     color: var(--colorTwo);
     border: none;
     padding: 0 1em;
