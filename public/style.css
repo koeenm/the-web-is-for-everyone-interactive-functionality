@@ -169,7 +169,7 @@ section.for-each-cards {
             display: flex;
             flex-direction: column;
 
-            background-color: var(--colorFour);
+            background-color: var(--colorTwo);
 
             height: 25em;
             width: 20em;
@@ -185,7 +185,7 @@ section.for-each-cards {
 
                 h3 {
                     text-align: center;
-                    color: var(--colorTwo);
+                    color: var(--colorFour);
                 }
 
                 img {
@@ -273,6 +273,7 @@ section.detail-card {
     display: flex;
     justify-content: center;
     gap: 1em;
+    padding-top: 1em;
 }
 
 button {
